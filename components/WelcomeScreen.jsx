@@ -9,7 +9,7 @@ import { ScreenContainer } from './ScreenContainer';
 const { yellow, orange, white } = palette
 
 export const WelcomeScreen = () => {
-  const { container, title, name, background } = styles
+  const { title, name } = styles
 
   return (
     <ScreenContainer>
