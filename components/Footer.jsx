@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-      🍗 All rights reserved by Wings n Things &copy;{new Date().getFullYear()}
+      🍗 All rights reserved by Wingamabobs &copy;{new Date().getFullYear()}
       </Text>
     </View>
   );

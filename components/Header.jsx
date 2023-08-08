@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-        WINGS N THINGS
+        Wingamabobs
       </Text>
     </View>
   );

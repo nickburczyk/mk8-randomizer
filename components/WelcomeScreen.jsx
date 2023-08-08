@@ -15,7 +15,7 @@ export const WelcomeScreen = () => {
     <ScreenContainer>
       <ScrollView indicatorStyle='white'>
         <Text style={title} >
-          <Text style={name}>Wings n Things{'\n'}</Text>
+          <Text style={name}>Wingamabobs{'\n'}</Text>
           will light you up with the
           <AccentedText text={'crispiest'} color={yellow.hex}/>
           wings, drenched in the
