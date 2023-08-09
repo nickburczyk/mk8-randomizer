@@ -13,7 +13,7 @@ export const ContactScreen = () => {
 
   return (
     <ScreenContainer>
-      <ScrollView indicatorStyle='white'>
+      <ScrollView indicatorStyle='white' keyboardDismissMode='on-drag'>
         <PageTitle 
           title='Get in Touch' 
           blurb='Your feedback is important to us.'

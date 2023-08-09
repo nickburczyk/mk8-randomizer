@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: palette.yellow.hex, 
-    padding: 40, 
+    paddingTop: 40, 
+    paddingBottom: 24,
     fontSize: 40, 
     fontWeight: '900'
   }

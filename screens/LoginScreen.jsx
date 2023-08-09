@@ -14,6 +14,7 @@ export const LoginScreen = () => {
     <ScreenContainer>
       <ScrollView 
         indicatorStyle='white'
+        keyboardDismissMode='on-drag'
       >
         <PageTitle 
           title='Welcome!' 

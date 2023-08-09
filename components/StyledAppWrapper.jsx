@@ -7,7 +7,7 @@ import WingDrip from '../assets/wingdrip.png'
 
 export const StyledAppWrapper = ({children}) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ImageBackground 
         source={WingDrip} 
         resizeMethod="auto" 
@@ -20,7 +20,7 @@ export const StyledAppWrapper = ({children}) => {
           <Footer/>
         </View>
       </ImageBackground>
-    </SafeAreaView>
+    </View>
   );
 }
 
