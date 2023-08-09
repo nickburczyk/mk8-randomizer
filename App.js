@@ -2,7 +2,7 @@ import React from 'react';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 import { MenuScreen } from './screens/MenuScreen';
 import { StyledAppWrapper } from './components/StyledAppWrapper';
-import { ContactScreen } from './components/ContactScreen';
+import { ContactScreen } from './screens/ContactScreen';
 import { LoginScreen } from './screens/LoginScreen';
 
 const App = () => {

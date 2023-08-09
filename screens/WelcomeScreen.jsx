@@ -1,8 +1,6 @@
 import React from 'react'
-import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 import { palette } from '../assets/palette';
-import wingDrip from '../assets/wingdrip.png'
-import { longText } from '../lib/menu';
 import { AccentedText } from '../components/AccentedText'
 import { ScreenContainer } from '../components/ScreenContainer';
 
@@ -38,11 +36,5 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: '700'
-  },
-  background: {
-    flex:1,
-    paddingTop: 40,
-    justifyContent: 'flex-start',
-    alignItems: 'center'
   }
 })

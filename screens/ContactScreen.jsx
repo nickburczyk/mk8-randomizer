@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { palette } from '../assets/palette';
-import { ScreenContainer } from './ScreenContainer';
-import { Input } from './Input';
-import { PageTitle } from './PageTitle';
+import { ScreenContainer } from '../components/ScreenContainer';
+import { Input } from '../components/Input';
+import { PageTitle } from '../components/PageTitle';
 
 export const ContactScreen = () => {
   // TODO: add refs to inputs to allow "next" on return press
@@ -23,19 +23,19 @@ export const ContactScreen = () => {
             name="name"
             placeholder='Name'
             value={name}
-            onChange={setName}
+            onChangeText={setName}
           />
           <Input
             name="email"
             placeholder='Email Address'
             value={email}
-            onChange={setEmail}
+            onChangeText={setEmail}
           />
           <Input
             name="message"
             placeholder='Type your message here'
             value={message}
-            onChange={setMessage}
+            onChangeText={setMessage}
             numberOfLines={4}
           />
         </View>

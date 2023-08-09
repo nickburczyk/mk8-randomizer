@@ -4,36 +4,42 @@ import { palette } from '../assets/palette';
 import { capitalizeString } from '../lib/util';
 
 const { yellow, orange,red, gray } = palette
-
+const keyboardTypes = ['default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search', 'visible-password']
 export const Input = ({ 
   label, 
   name, 
   placeholder, 
-  onChange, 
+  onChangeText, 
   value, 
   numberOfLines, 
   isLastInput = false,
-  secureTextEntry = false
-}) => (
-  <View style={styles.inputWrapper}>
-    <Text style={styles.inputLabel}>
-      {label || capitalizeString(name)}:
-    </Text>
-    <TextInput
-      name={name}
-      placeholder={placeholder}
-      placeholderTextColor={gray.hex}
-      style={styles.input}
-      cursorColor={red.hex}
-      value={value}
-      onChangeText={onChange}
-      multiline={numberOfLines && numberOfLines > 1}
-      numberOfLines={numberOfLines}
-      returnKeyType={isLastInput ? 'done' : 'next'}
-      secureTextEntry={secureTextEntry}
-    />
-  </View>
-)
+  secureTextEntry = false,
+  keyboardType = 'default'
+}) => {
+  const safeKeyboardType = keyboardTypes.includes(keyboardType) ? keyboardType : 'default'
+
+  return(
+    <View style={styles.inputWrapper}>
+      <Text style={styles.inputLabel}>
+        {label || capitalizeString(name)}:
+      </Text>
+      <TextInput
+        name={name}
+        placeholder={placeholder}
+        placeholderTextColor={gray.hex}
+        style={styles.input}
+        cursorColor={red.hex}
+        value={value}
+        onChangeText={onChangeText}
+        multiline={numberOfLines && numberOfLines > 1}
+        numberOfLines={numberOfLines}
+        returnKeyType={isLastInput ? 'done' : 'next'}
+        secureTextEntry={secureTextEntry}
+        keyboardType={safeKeyboardType}
+      />
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   inputWrapper:{

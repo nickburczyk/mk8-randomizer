@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { palette } from '../assets/palette';
 import { ScreenContainer } from '../components/ScreenContainer';
-import { capitalizeString } from '../lib/util';
 import { Input } from '../components/Input';
 import { PageTitle } from '../components/PageTitle';
 
@@ -25,13 +24,14 @@ export const LoginScreen = () => {
             name="username"
             placeholder='Username'
             value={username}
-            onChange={setUsername}
+            onChangeText={setUsername}
+            keyboardType='email-address'
           />
           <Input
             name="password"
             placeholder='Password'
             value={password}
-            onChange={setPassword}
+            onChangeText={setPassword}
             secureTextEntry
           />
         </View>
