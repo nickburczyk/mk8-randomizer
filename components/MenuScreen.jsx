@@ -4,6 +4,7 @@ import { palette } from '../assets/palette';
 import { flatListMenuData, sectionListMenuData } from '../lib/menu';
 import { ScreenContainer } from './ScreenContainer';
 import { MenuItem } from './MenuItem';
+import { PageTitle } from './PageTitle';
 
 const { yellow, red, gray } = palette
 
@@ -20,7 +21,7 @@ export const MenuScreen = () => {
   )
 
   const menuHeader = useCallback(()=>
-    <Text style={styles.pageTitle}>Wings Menu</Text>
+    <PageTitle title="Our Menu"/>
   , [])
   return (
     <ScreenContainer>
@@ -47,12 +48,6 @@ export const MenuScreen = () => {
 }
 
 const styles = StyleSheet.create({
-  pageTitle: {
-    fontSize: 32,
-    color: red.hex,
-    fontWeight: '800',
-    marginBottom: 50
-  },
   separator: {
     borderBottomColor: gray.hex,
     borderBottomWidth: 1

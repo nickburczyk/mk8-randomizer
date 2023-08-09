@@ -2,41 +2,37 @@ import React, { useState } from 'react'
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { palette } from '../assets/palette';
 import { ScreenContainer } from './ScreenContainer';
+import { capitalizeString } from '../lib/util';
 import { Input } from './Input';
 import { PageTitle } from './PageTitle';
 
-export const ContactScreen = () => {
+export const LoginScreen = () => {
   // TODO: add refs to inputs to allow "next" on return press
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   return (
     <ScreenContainer>
-      <ScrollView indicatorStyle='white'>
+      <ScrollView 
+        indicatorStyle='white'
+      >
         <PageTitle 
-          title='Get in Touch' 
-          blurb='Your feedback is important to us.'
+          title='Welcome!' 
+          blurb='Please log in to continue'
         />
         <View style={styles.formWrapper}>
           <Input
-            name="name"
-            placeholder='Name'
-            value={name}
-            onChange={setName}
+            name="username"
+            placeholder='Username'
+            value={username}
+            onChange={setUsername}
           />
           <Input
-            name="email"
-            placeholder='Email Address'
-            value={email}
-            onChange={setEmail}
-          />
-          <Input
-            name="message"
-            placeholder='Type your message here'
-            value={message}
-            onChange={setMessage}
-            numberOfLines={4}
+            name="password"
+            placeholder='Password'
+            value={password}
+            onChange={setPassword}
+            secureTextEntry
           />
         </View>
       </ScrollView>
