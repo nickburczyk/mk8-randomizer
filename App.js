@@ -1,9 +1,9 @@
 import React from 'react';
-import { WelcomeScreen } from './components/WelcomeScreen';
-import { MenuScreen } from './components/MenuScreen';
+import { WelcomeScreen } from './screens/WelcomeScreen';
+import { MenuScreen } from './screens/MenuScreen';
 import { StyledAppWrapper } from './components/StyledAppWrapper';
 import { ContactScreen } from './components/ContactScreen';
-import { LoginScreen } from './components/LoginScreen';
+import { LoginScreen } from './screens/LoginScreen';
 
 const App = () => {
   return (

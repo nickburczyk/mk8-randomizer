@@ -3,8 +3,8 @@ import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-nativ
 import { palette } from '../assets/palette';
 import wingDrip from '../assets/wingdrip.png'
 import { longText } from '../lib/menu';
-import { AccentedText } from './AccentedText'
-import { ScreenContainer } from './ScreenContainer';
+import { AccentedText } from '../components/AccentedText'
+import { ScreenContainer } from '../components/ScreenContainer';
 
 const { yellow, orange, white } = palette
 

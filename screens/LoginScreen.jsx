@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { palette } from '../assets/palette';
-import { ScreenContainer } from './ScreenContainer';
+import { ScreenContainer } from '../components/ScreenContainer';
 import { capitalizeString } from '../lib/util';
-import { Input } from './Input';
-import { PageTitle } from './PageTitle';
+import { Input } from '../components/Input';
+import { PageTitle } from '../components/PageTitle';
 
 export const LoginScreen = () => {
   // TODO: add refs to inputs to allow "next" on return press

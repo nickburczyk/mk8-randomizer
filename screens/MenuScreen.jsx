@@ -2,9 +2,9 @@ import React, { useCallback } from 'react'
 import { FlatList, SectionList, StyleSheet, Text, View } from 'react-native';
 import { palette } from '../assets/palette';
 import { flatListMenuData, sectionListMenuData } from '../lib/menu';
-import { ScreenContainer } from './ScreenContainer';
-import { MenuItem } from './MenuItem';
-import { PageTitle } from './PageTitle';
+import { ScreenContainer } from '../components/ScreenContainer';
+import { MenuItem } from '../components/MenuItem';
+import { PageTitle } from '../components/PageTitle';
 
 const { yellow, red, gray } = palette
 
