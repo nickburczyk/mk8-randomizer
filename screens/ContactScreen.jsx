@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { palette } from '../assets/palette';
 import { ScreenContainer } from '../components/ScreenContainer';
-import { Input } from '../components/Input';
+import { LabeledInput } from '../components/LabeledInput';
 import { PageTitle } from '../components/PageTitle';
 
 export const ContactScreen = () => {
@@ -19,19 +19,19 @@ export const ContactScreen = () => {
           blurb='Your feedback is important to us.'
         />
         <View style={styles.formWrapper}>
-          <Input
+          <LabeledInput
             name="name"
             placeholder='Name'
             value={name}
             onChangeText={setName}
           />
-          <Input
+          <LabeledInput
             name="email"
             placeholder='Email Address'
             value={email}
             onChangeText={setEmail}
           />
-          <Input
+          <LabeledInput
             name="message"
             placeholder='Type your message here'
             value={message}

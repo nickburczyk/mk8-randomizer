@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { palette } from '../assets/palette';
 import { ScreenContainer } from '../components/ScreenContainer';
-import { Input } from '../components/Input';
+import { LabeledInput } from '../components/LabeledInput';
 import { PageTitle } from '../components/PageTitle';
 
 export const LoginScreen = () => {
@@ -21,14 +21,14 @@ export const LoginScreen = () => {
           blurb='Please log in to continue'
         />
         <View style={styles.formWrapper}>
-          <Input
+          <LabeledInput
             name="username"
             placeholder='Username'
             value={username}
             onChangeText={setUsername}
             keyboardType='email-address'
           />
-          <Input
+          <LabeledInput
             name="password"
             placeholder='Password'
             value={password}
