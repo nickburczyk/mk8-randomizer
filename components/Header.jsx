@@ -1,13 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
-import { palette } from '../assets/palette';
+import { Image, StyleSheet, View } from 'react-native';
+import {Logo} from '../assets/LogoWide.png'
 
 export const Header = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
-        Wingamabobs
-      </Text>
+      <Image source={ Logo } style={styles.logo} alt='Wingamabobs'/>
     </View>
   );
 }
@@ -15,13 +13,13 @@ export const Header = () => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    padding: 24,
+    paddingTop: 50,
+    paddingBottom: 12
   },
-  title: {
-    color: palette.yellow.hex, 
-    paddingTop: 40, 
-    paddingBottom: 24,
-    fontSize: 40, 
-    fontWeight: '900'
+  logo: {
+    height: 80,
+    resizeMode: 'contain'
   }
 })
