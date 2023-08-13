@@ -8,10 +8,10 @@ import { LoginScreen } from './screens/LoginScreen';
 const App = () => {
   return (
     <StyledAppWrapper>
-      {/* <WelcomeScreen/> */}
+      <WelcomeScreen/>
       {/* <MenuScreen/> */}
       {/* <ContactScreen/> */}
-      <LoginScreen />
+      {/* <LoginScreen /> */}
     </StyledAppWrapper>
   );
 }

@@ -10,7 +10,7 @@ export const LoginScreen = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-
+  
   return (
     <ScreenContainer>
       {!isLoggedIn ? (
@@ -72,9 +72,10 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 48,
     textAlign: 'center', 
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '900',
     fontStyle: 'italic',
+    textTransform: 'uppercase'
   },
   loggedInText: {
     textAlign: 'center',

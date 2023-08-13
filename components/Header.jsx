@@ -1,11 +1,17 @@
 import React from 'react'
 import { Image, StyleSheet, View } from 'react-native';
-import {Logo} from '../assets/LogoWide.png'
+import Logo from '../assets/LogoWide.png'
 
 export const Header = () => {
   return (
     <View style={styles.container}>
-      <Image source={ Logo } style={styles.logo} alt='Wingamabobs'/>
+      <Image 
+        source={Logo} 
+        style={styles.logo} 
+        resizeMode='contain'
+        accessible={true}
+        accessibilityLabel='Wingamabobs logo'
+      />
     </View>
   );
 }
@@ -20,6 +26,5 @@ const styles = StyleSheet.create({
   },
   logo: {
     height: 80,
-    resizeMode: 'contain'
   }
 })
