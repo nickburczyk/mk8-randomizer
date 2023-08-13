@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { palette } from '../assets/palette';
 import { capitalizeString } from '../lib/util';
 
-const { yellow, orange,red, gray } = palette
+const { yellow, orange, red, white } = palette
 const keyboardTypes = ['default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search', 'visible-password']
 export const LabeledInput = ({ 
   label, 
@@ -26,7 +26,7 @@ export const LabeledInput = ({
       <TextInput
         name={name}
         placeholder={placeholder}
-        placeholderTextColor={gray.hex}
+        placeholderTextColor={white.hex}
         style={styles.input}
         cursorColor={red.hex}
         value={value}

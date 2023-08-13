@@ -17,7 +17,6 @@ export const StyledAppWrapper = ({children}) => {
         <Header/>
         <View style={{flex: 1}}>
           {children}
-          <Footer/>
         </View>
       </ImageBackground>
     </View>

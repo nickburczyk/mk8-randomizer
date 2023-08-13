@@ -1,18 +1,17 @@
 import React from 'react';
-import { WelcomeScreen } from './screens/WelcomeScreen';
-import { MenuScreen } from './screens/MenuScreen';
 import { StyledAppWrapper } from './components/StyledAppWrapper';
-import { ContactScreen } from './screens/ContactScreen';
-import { LoginScreen } from './screens/LoginScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { TabNavigator, StackNavigator, DrawerNavigator } from './components/navigation';
 
 const App = () => {
   return (
-    <StyledAppWrapper>
-      <WelcomeScreen/>
-      {/* <MenuScreen/> */}
-      {/* <ContactScreen/> */}
-      {/* <LoginScreen /> */}
-    </StyledAppWrapper>
+    <NavigationContainer>
+      <StyledAppWrapper>
+        <TabNavigator/>
+        {/* <DrawerNavigator/> */}
+        {/* <StackNavigator/> */}
+      </StyledAppWrapper>
+    </NavigationContainer>
   );
 }
 

@@ -38,7 +38,6 @@ export const MenuScreen = () => {
         sections={sectionListMenuData}
         renderItem={renderer}
         keyExtractor={({ id }) => id}
-        ListHeaderComponent={menuHeader}
         ItemSeparatorComponent={separator}
         renderSectionHeader={sectionHeader}
         indicatorStyle='white'

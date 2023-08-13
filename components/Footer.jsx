@@ -15,11 +15,11 @@ export const Footer = () => {
     styles.title,
     { color: darkMode ? palette.white.hex : palette.black.hex }
   ]
+  
   return (
     <View style={containerStyles}>
       <Text style={titleStyles}>
         🍗 All rights reserved by Wingamabobs &copy;{new Date().getFullYear()}
-        <Text style={{marginLeft: 'auto'}}>{darkMode ? '🌙' : '🌞'}</Text>
       </Text>
     </View>
   );

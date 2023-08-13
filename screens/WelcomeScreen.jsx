@@ -1,12 +1,14 @@
 import React from 'react'
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 import { palette } from '../assets/palette';
 import { AccentedText } from '../components/AccentedText'
 import { ScreenContainer } from '../components/ScreenContainer';
+import { useNavigation } from '@react-navigation/core';
 
 const { yellow, orange, white } = palette
 
 export const WelcomeScreen = () => {
+  const navigation = useNavigation();
   const { title, name } = styles
 
   return (
@@ -20,6 +22,12 @@ export const WelcomeScreen = () => {
           <AccentedText text={'spiciest'} color={orange.hex}/> 
           sauces around!
         </Text> 
+        <Pressable 
+          onPress={()=>navigation.navigate('Menu')}
+          style={styles.viewMenuButton}
+        >
+          <Text style={styles.btnText}>View Menu</Text>
+        </Pressable>
       </ScrollView>
     </ScreenContainer>
   );
@@ -36,5 +44,19 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: '700'
+  },
+  viewMenuButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  btnText: {
+    padding: 12,
+    paddingHorizontal: 30,
+    backgroundColor: palette.yellow.hex,
+    fontSize: 24,
+    fontWeight: "900",
+    fontStyle: 'italic',
+    textTransform: 'uppercase',
+
   }
 })
