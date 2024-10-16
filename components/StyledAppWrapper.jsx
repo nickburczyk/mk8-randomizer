@@ -1,36 +1,25 @@
-import React from 'react';
-import { View, ImageBackground, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import { palette } from '../assets/palette';
-import { Header } from './Header';
-import { Footer } from './Footer';
-import WingDrip from '../assets/wingdrip.png'
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { palette } from "../assets/palette";
+import { Header } from "./Header";
 
-export const StyledAppWrapper = ({children}) => {
+export const StyledAppWrapper = ({ children }) => {
   return (
     <View style={styles.container}>
-      <ImageBackground 
-        source={WingDrip} 
-        resizeMethod="auto" 
-        resizeMode='cover' 
-        style={styles.background}
-      >
-        <Header/>
-        <View style={{flex: 1}}>
-          {children}
-        </View>
-      </ImageBackground>
+      <Header />
+      <View style={{ flex: 1 }}>{children}</View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     backgroundColor: palette.white.hex,
   },
   background: {
-    flex:1,
-    justifyContent: 'flex-start',
-  }
+    flex: 1,
+    justifyContent: "flex-start",
+  },
 });

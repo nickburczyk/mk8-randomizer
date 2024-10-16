@@ -1,19 +1,16 @@
-import React from 'react';
-import { StyledAppWrapper } from './components/StyledAppWrapper';
-import { NavigationContainer } from '@react-navigation/native';
-import { TabNavigator, StackNavigator, DrawerNavigator } from './components/navigation';
+import React from "react";
+import { StyledAppWrapper } from "./components/StyledAppWrapper";
+import { NavigationContainer } from "@react-navigation/native";
+import { TabNavigator } from "./components/navigation";
 
 const App = () => {
   return (
     <NavigationContainer>
       <StyledAppWrapper>
-        <TabNavigator/>
-        {/* <DrawerNavigator/> */}
-        {/* <StackNavigator/> */}
+        <TabNavigator />
       </StyledAppWrapper>
     </NavigationContainer>
   );
-}
+};
 
-export default App
-
+export default App;

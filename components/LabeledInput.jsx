@@ -1,28 +1,42 @@
-import React from 'react';
-import { View, Text, TextInput, StyleSheet } from 'react-native';
-import { palette } from '../assets/palette';
-import { capitalizeString } from '../lib/util';
+import React from "react";
+import { View, Text, TextInput, StyleSheet } from "react-native";
+import { palette } from "../style/palette";
+import { capitalizeString } from "../lib/util";
 
-const { yellow, orange, red, white } = palette
-const keyboardTypes = ['default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search', 'visible-password']
-export const LabeledInput = ({ 
-  label, 
-  name, 
-  placeholder, 
-  onChangeText, 
-  value, 
-  numberOfLines, 
+const { yellow, orange, red, white } = palette;
+const keyboardTypes = [
+  "default",
+  "email-address",
+  "numeric",
+  "phone-pad",
+  "ascii-capable",
+  "numbers-and-punctuation",
+  "url",
+  "number-pad",
+  "name-phone-pad",
+  "decimal-pad",
+  "twitter",
+  "web-search",
+  "visible-password",
+];
+export const LabeledInput = ({
+  label,
+  name,
+  placeholder,
+  onChangeText,
+  value,
+  numberOfLines,
   isLastInput = false,
   secureTextEntry = false,
-  keyboardType = 'default'
+  keyboardType = "default",
 }) => {
-  const safeKeyboardType = keyboardTypes.includes(keyboardType) ? keyboardType : 'default'
+  const safeKeyboardType = keyboardTypes.includes(keyboardType)
+    ? keyboardType
+    : "default";
 
-  return(
+  return (
     <View style={styles.inputWrapper}>
-      <Text style={styles.inputLabel}>
-        {label || capitalizeString(name)}:
-      </Text>
+      <Text style={styles.inputLabel}>{label || capitalizeString(name)}:</Text>
       <TextInput
         name={name}
         placeholder={placeholder}
@@ -33,30 +47,30 @@ export const LabeledInput = ({
         onChangeText={onChangeText}
         multiline={numberOfLines && numberOfLines > 1}
         numberOfLines={numberOfLines}
-        returnKeyType={isLastInput ? 'done' : 'next'}
+        returnKeyType={isLastInput ? "done" : "next"}
         secureTextEntry={secureTextEntry}
         keyboardType={safeKeyboardType}
       />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-  inputWrapper:{
-    marginBottom: 40
+  inputWrapper: {
+    marginBottom: 40,
   },
   inputLabel: {
-    fontWeight: '600',
+    fontWeight: "600",
     color: orange.hex,
-    fontSize: 18
+    fontSize: 18,
   },
   input: {
-    textAlignVertical: 'top',
+    textAlignVertical: "top",
     fontSize: 16,
     maxHeight: 100,
     padding: 12,
     color: yellow.hex,
     borderBottomColor: yellow.hex,
-    borderBottomWidth: 1
-  }
-})
+    borderBottomWidth: 1,
+  },
+});

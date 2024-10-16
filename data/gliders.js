@@ -1,0 +1,17 @@
+export const gliders = [
+  "Super Glider",
+  "Wario Wing",
+  "Cloud Glider",
+  "Waddle Wing",
+  "Peach Parasol",
+  "Parachute",
+  "Parafoil",
+  "Flower Glider",
+  "Bowser Kite",
+  "Plane Glider",
+  "MKTV Parafoil",
+  "Gold Glider",
+  "Hylian Kite",
+  "Paraglider",
+  "Paper Glider",
+];

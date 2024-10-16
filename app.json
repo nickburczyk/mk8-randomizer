@@ -1,19 +1,17 @@
 {
   "expo": {
-    "name": "coursera-expo",
-    "slug": "coursera-expo",
+    "name": "mariokart-randomizer",
+    "slug": "mariokart-randomizer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/IconSplash.png",
+      "image": "./assets/mariohead.png",
       "resizeMode": "center",
-      "backgroundColor": "#e01a4f"
+      "backgroundColor": "#E60012"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
